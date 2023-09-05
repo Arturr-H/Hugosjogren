@@ -1,0 +1,420 @@
+.collection-thumbnail-container {
+    cursor: pointer;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+        align-items: center;
+
+    min-height: 50vmin;
+}
+
+.collection-thumbnail {
+    position: absolute;
+    width: 20vmin;
+    height: 27.5vmin;
+
+    background: #fff;
+
+    box-sizing: border-box;
+    padding: 0.75vmin;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        align-items: center;
+    transition: transform 0.05s ease-in-out;
+
+    box-shadow: 0 0 3vmin #00000099;
+
+}
+.collection-thumbnail > .collection-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+
+}.collection-thumbnail .collection-date {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: right;
+
+    font-size: 1.4vmin;
+    color: #888;
+    font-weight: 300;
+}.collection-thumbnail .collection-title {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    text-align: left;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.2vmin;
+
+    margin-top: 0.5vmin;
+}
+
+.collection-pin {
+    position: absolute;
+
+    width: 4vmin;
+    height: 4vmin;
+
+    transform: translateY(-100%) translateX(1vmin);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .collection-thumbnail {
+        width: 25vmin;
+        height: 35vmin;
+    }
+    .collection-pin {
+        width: 5vmin;
+        height: 5vmin;
+    }
+}
+@media screen and (max-width: 800px) {
+    .collection-thumbnail {
+        width: 30vmin;
+        height: 42vmin;
+        padding: 1vmin;
+    }
+    .collection-pin {
+        width: 6vmin;
+        height: 6vmin;
+    }
+    .collection-thumbnail > .collection-date {
+        font-size: 1.8vmin;
+    }
+    .collection-thumbnail-container {
+        min-height: 60vmin;
+    }
+    .collection-thumbnail .collection-title {
+        font-size: 5vmin;
+    }
+}
+@media screen and (max-width: 600px) {
+    .collection-thumbnail {
+        width: 40vmin;
+        height: 56vmin;
+
+        padding: 2vmin;
+    }
+    .collection-pin {
+        width: 8vmin;
+        height: 8vmin;
+    }
+    .collection-thumbnail > .collection-date {
+        font-size: 2.4vmin;
+    }
+    .collection-thumbnail-container {
+        min-height: 70vmin;
+    }
+    .collection-thumbnail .collection-title {
+        font-size: 6vmin;
+    }
+}
+
+
+/* Post */
+.post {
+	width: 100vw;
+	height: 100vh;
+
+	display: inline-flex;
+	gap: 1rem;
+	justify-content: center;
+		align-items: center;
+
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 1rem;
+}.post > .row {
+	display: inline-flex;
+	gap: 1rem;
+	justify-content: center;
+		align-items: center;
+
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+}.post > .row > a {
+	width: 100%;
+	height: 100%;
+}.post > .row > a > button {
+	width: 100%;
+	height: 100%;
+
+	font-family: 'Bebas Neue', cursive;
+	font-size: 10vmax;
+	cursor: pointer;
+	background: #fff;
+
+	border: none;
+	outline: none;
+}.post > .row > a > button:hover {
+	background: #ebebeb;
+}.post > .row > div.upload {
+	background: white;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+		align-items: center;
+
+	font-family: 'Bebas Neue', cursive;
+	font-size: 3vmax;
+}.row-hover {
+	outline: 1rem rgb(41, 109, 212) solid;
+}
+
+/* Create */
+.create {
+	width: 100vw;
+	height: 100vh;
+
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}.create > .column {
+	display: inline-flex;
+	gap: 1rem;
+	flex-direction: column;
+	justify-content: center;
+		align-items: center;
+
+	width: 25%;
+}.create > .column > input[type="text"] {
+	width: 100%;
+
+	outline: none;
+	border: none;
+
+	font-size: 2rem;
+	font-family: 'Bebas Neue', cursive;
+
+	box-sizing: border-box;
+	padding: 0.5rem;
+
+	border-bottom: 0.3rem solid rgb(102, 110, 220);
+
+}.create > .column > input[type="text"]:focus {
+	border-bottom: 0.3rem solid rgb(102, 110, 220);
+}.create > .column > input[type="text"]:focus + .create-button {
+	background: rgb(102, 110, 220);
+	color: #fff;
+}.create > .column > input[type="text"]:focus + .create-button:hover {
+	background: rgb(102, 110, 220);
+	color: #fff;
+}.create > .column > .create-button {
+	width: 100%;
+	height: 5vmax;
+
+	font-size: 2rem;
+	font-family: 'Bebas Neue', cursive;
+
+	background: #fff;
+	color: rgb(102, 110, 220);
+
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 0.5rem;
+
+	border: 0.3rem solid rgb(102, 110, 220);
+}.create > .create-button:hover {
+	background: rgb(102, 110, 220);
+	color: #fff;
+}
+
+/* Create */
+.create {
+	width: 100vw;
+	height: 100vh;
+
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}.create > .column {
+	display: inline-flex;
+	gap: 1rem;
+	flex-direction: column;
+	justify-content: center;
+		align-items: center;
+
+	width: 45%;
+}.create > .column > input[type="text"] {
+	width: 100%;
+
+	outline: none;
+	border: none;
+
+	font-size: 2rem;
+	font-family: 'Bebas Neue', cursive;
+
+	box-sizing: border-box;
+	padding: 0.5rem;
+
+	border-bottom: 0.3rem solid rgb(102, 110, 220);
+
+}.create > .column > input[type="text"]:focus {
+	border-bottom: 0.3rem solid rgb(102, 110, 220);
+}.create > .column > input[type="text"]:focus + .create-button {
+	background: rgb(102, 110, 220);
+	color: #fff;
+}.create > .column > input[type="text"]:focus + .create-button:hover {
+	background: rgb(102, 110, 220);
+	color: #fff;
+}.create-button {
+	width: 100%;
+
+	font-size: 2rem;
+	font-family: 'Bebas Neue', cursive;
+
+	background: #fff;
+	color: rgb(102, 110, 220);
+
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 0.5rem;
+
+	border: 0.3rem solid rgb(102, 110, 220);
+}.create-button:hover {
+	background: rgb(102, 110, 220);
+	color: #fff;
+}
+
+/* Collection images */
+.cover-image-container {
+	width: 11rem;
+	height: 14rem;
+
+	background: #f8f8f8;
+	position: relative;
+
+	box-sizing: border-box;
+	padding: 0.5rem;
+	padding-top: 0;
+
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.31);
+	transform-origin: center -10%;
+	border-radius: 0.2vmin;
+}.pin {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-33%) translateY(-140%);
+	width: 2rem;
+	height: 2rem;
+
+	z-index: 4;
+}.cover-image-container > .cover-image {
+	width: 100%;
+	aspect-ratio: 1;
+	overflow: hidden;
+}.cover-image-container > .cover-image > img[src] {
+	display: block;
+	object-fit: cover;
+	aspect-ratio: 1;
+	width: 100%;
+	transition: transform 0.1s ease-in-out;
+}.cover-image-container > .cover-image > img {
+	object-fit: cover;
+	aspect-ratio: 1;
+	width: 100%;
+	transition: transform 0.1s ease-in-out;
+
+	display: none;
+}.cover-image-container:hover {
+	animation: rotate-dangle 1s forwards ease-in-out;
+}.cover-image-container:hover .cover-image > img {
+	transform: scale(1.05);
+}.cover-image-container > p {
+	font-size: 1rem;
+	color: rgb(0, 0, 0);
+
+	padding: 0;
+	margin: 0;
+
+	text-decoration: underline 0.1rem black;
+}.cover-image-container > p.date {
+	font-size: 1.5rem;
+	font-weight: 300;
+	font-size: 0.6rem;
+	color: rgb(146, 146, 146);
+
+	position: absolute;
+	right: 1rem;
+	bottom: 0.5rem;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}.cover-image-container > input[type="text"] {
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-family: "Bebas Neue", cursive;
+	color: #000;
+	background: none;
+	outline: none;
+	border: none;
+
+	margin: 0;
+}.note-ending {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+}
+.uploaded {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	top: 0;
+	display: flex;
+	justify-content: center;
+		align-items: center;
+
+	background: rgb(92, 180, 92);
+	transform: scale(1.1);
+
+	user-select: none;
+	color: #fff;
+}
+.collection-delete-button {
+	width: 4.5vmax;
+	height: 2vmax;
+	background: rgb(231, 49, 49);
+	position: absolute;
+	right: -2vmax;
+	top: -3vmax;
+
+	z-index: 10;
+	border: none;
+	outline: none;
+
+	border-radius: 1vmax;
+
+	display: flex;
+	justify-content: center;
+		align-items: center;
+
+	cursor: pointer;
+}.collection-delete-button:hover {
+	background: rgb(196, 46, 46);
+}.collection-delete-button::before {
+	content: "Delete";
+	color: #fff;
+	font-size: 1vmax;
+
+	font-weight: 700;
+}

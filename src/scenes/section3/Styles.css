@@ -1,0 +1,120 @@
+.scene3 {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+
+.mushroom-image-container {
+    width: 100%;
+    height: 100%;
+}.mushroom-image-container > .mushroom-image {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+
+    position: absolute;
+}
+
+.title-container {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+        align-items: center;
+}
+.mask-title {
+    /* background: url("./assets/mushroom-fg.png"); 
+    background-size: auto 100vh;
+    background-position: 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+
+    mask: url("./assets/mushroom-fg.png") cover;
+    mask-size: 100vw auto;
+    mask-position: 50%;
+
+    font-weight: 500;
+    font-family: humaneBold;
+    font-size: 30vmin;
+    white-space: nowrap;
+
+    /* color: blue; */
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    transform: translateX(-100vw);
+}.title-container.animated .mask-title {
+    animation: text-intro 2s cubic-bezier(.12,.67,.35,1) forwards 0.5s;
+}
+.background-title {
+    font-weight: 500;
+    font-family: humaneBold;
+    font-size: 30vmin;
+
+    position: absolute;
+
+    white-space: nowrap;
+    color: white;
+
+    transform: translateX(-100vw);
+}.title-container.animated .background-title {
+    animation: text-intro 2s cubic-bezier(.12,.67,.35,1) forwards 0.5s;
+}
+.title-container-background {
+    /* background: url("./assets/mushroom-bg.JPG"); */
+    background-size: auto 100vh;
+    background-position: 50%;
+}
+
+.mi-bg, .mi-fg {
+    filter: brightness(0%);
+}.mi-bg.animated {
+    animation: fadein-bg 2s ease-in-out forwards;
+}.mi-fg.animated {
+    animation: fadein-fg 1s ease-in-out forwards;
+}
+
+@keyframes text-intro {
+    from { transform: translateX(-100vw); } to { transform: translateX(0); }
+}
+@keyframes fadein-bg {
+    from { filter: brightness(0%); } to { filter: brightness(100%); }
+}
+@keyframes fadein-fg {
+    from { filter: brightness(0%); transform: translateY(-1vh); } to { filter: brightness(100%); transform: translateY(0vh); }
+}
+
+.abouttext-container {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(0px);
+    background: #00000000;
+
+    animation: blurintro 1s ease forwards 3s;
+
+    display: flex;
+    justify-content: center;
+        align-items: center;
+
+    opacity: 0;
+    background: #000000aa;
+}.abouttext {
+    width: 60%;
+    color: #fff;
+    font-size: 2vmin;
+}
+
+@keyframes blurintro {
+    from {backdrop-filter: blur(0px);opacity: 0;}
+    to{backdrop-filter: blur(5px);opacity: 1;}
+}

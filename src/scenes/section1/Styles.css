@@ -1,0 +1,206 @@
+.scene {
+    width: 100%;
+    height: 100%;
+}
+
+.fg-container {
+    background: #000;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: visible;
+}
+.fg {
+    position: absolute;
+    object-fit: cover;
+
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    user-select: none;
+    pointer-events: none;
+}
+.fg1 {
+    height: 60vh !important;
+    max-height: 40vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    overflow: visible;
+    user-select: none;
+    pointer-events: none;
+}
+.fgelemcontainer.fg1 {
+    transform: translateY(50%) scale(2);
+}
+.fg1animate.animated { animation: moveup-fg1 3s cubic-bezier(.68,0,1,.8) forwards; }
+.fg1-image {
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    pointer-events: none;
+}
+.fg1-gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff00, #000000 80%);
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+}
+.fg2 { height: 80vh !important; transform: scale(1.05);  }
+.fg2animate.animated { animation: moveup-fg2 6s cubic-bezier(.68,0,1,.8) forwards }
+
+.fg3 { height: 100vh !important; transform: scale(1.05); user-select: none; pointer-events: none; }
+.fg3animate.animated { animation: moveup-fg3 6s cubic-bezier(.68,0,1,.8) forwards }
+
+.bg-black {
+    background: #000;
+    width: 100%;
+    height: 800%;
+    transform: translateY(12.5%);
+    z-index: -1;
+}
+
+.titlecontainer {
+    left: 50%;
+    top: 5vh;
+    transform: translate(-50%, -20%);
+
+    width: 100%;
+
+    position: absolute;
+}.titlecontainer.animated {
+    animation: downtemp 5s ease-in-out forwards;
+}
+h1.title {
+    font-size: 15vmax;
+    font-weight: 500;
+
+    font-family: humaneBold;
+    color: #daecf3;
+
+    user-select: none;
+    pointer-events: none;
+
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+@keyframes downtemp {
+    from { transform: translate(-50%, -20%);}
+    to { transform: translate(-50%, 100vh);}
+}
+@keyframes moveup-fg1 { from { transform: none; } to { transform: translateY(-100vh); } }
+@keyframes moveup-fg2 { from { transform: translateY(0vh); } to { transform: translateY(-250vh); } }
+@keyframes moveup-fg3 { from { transform: translateY(0vh); } to { transform: translateY(-100vh); } }
+
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    height: 8vmin;
+
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    padding-left: 4vmin;
+    padding-right: 4vmin;
+
+    gap: 3vmin;
+
+    transition: opacity 0.5s ease-in-out;
+
+    opacity: 0;
+    animation: fadein 0.5s ease-in-out forwards;
+}.navbar > a {
+    color: #daecf3;
+    cursor: pointer;
+
+    display: inline-block;
+    position: relative;
+
+    width: max-content;
+    font-weight: 200;
+    text-decoration: none;
+    user-select: none;
+}.navbar > a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.7px;
+    bottom: 0;
+    left: 0;
+    background-color: #daecf3;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}.navbar > a.active:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}.navbar > a.active {
+    cursor: no-drop;
+    pointer-events: none;
+}
+
+.navbar > a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        height: 16vmin;
+        padding-left: 8vmin;
+        padding-right: 8vmin;
+    }
+    h1.title {
+        font-size: 18vmin;
+    }.titlecontainer {
+        top: 24vmin;
+    }
+}
+
+.clicktocontinue {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5vmin;
+    position: absolute;
+
+    color: #fff;
+    mix-blend-mode: difference;
+    z-index: 20;
+    font-weight: 200;
+    text-transform: uppercase;
+    opacity: 0.7;
+
+    transition: opacity 0.5s ease-in-out;
+}.fadeaway {
+    animation: fadeaway 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeaway { from { opacity: 1; } to { opacity: 0; } }
+
+.fgelemcontainer {
+    position: absolute;
+    object-fit: cover;
+
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    user-select: none;
+    pointer-events: none;
+
+}
