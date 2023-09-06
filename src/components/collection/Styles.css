@@ -93,7 +93,7 @@
         min-height: 60vmin;
     }
     .collection-thumbnail .collection-title {
-        font-size: 5vmin;
+        font-size: 3vmin;
     }
 }
 @media screen and (max-width: 600px) {
@@ -114,7 +114,7 @@
         min-height: 70vmin;
     }
     .collection-thumbnail .collection-title {
-        font-size: 6vmin;
+        font-size: 4vmin;
     }
 }
 

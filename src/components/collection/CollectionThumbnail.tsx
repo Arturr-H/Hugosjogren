@@ -54,7 +54,7 @@ class Collection extends React.PureComponent<Props & Extra> {
 				duration: 500,
 				easing: "ease-in-out",
 				fill: "forwards",
-				delay: (this.props.delay ?? 200) + 1500
+				delay: (this.props.delay ?? 200) + 3000
 			});
 		});
 	}
