@@ -80,12 +80,13 @@
 
 @media screen and (max-width: 1000px) {
     .collection-container {
-        grid-template-rows: repeat(auto-fill, minmax(44vmin, 1fr));   
+        grid-template-rows: repeat(auto-fill, minmax(34vmin, 1fr));   
     }
 }
 @media screen and (max-width: 800px) {
     .collection-container {
         grid-template-rows: none !important;
+        grid-template-columns: repeat(auto-fill, minmax(48vmin, 1fr)) !important;
         gap: 8vmin;
     }
 }
@@ -118,8 +119,8 @@
     position: absolute;
 }.collection-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(38vmin, 1fr));
-    /* grid-template-rows: repeat(auto-fit, minmax(34vmin, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(28vmin, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
     gap: 5vmin;
 
     width: 100%;

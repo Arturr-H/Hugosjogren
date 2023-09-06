@@ -6,7 +6,12 @@
     justify-content: center;
         align-items: center;
 
-    min-height: 50vmin;
+    min-height: 32vmin;
+}
+@media screen and (max-height: 1000px) {
+	.collection-thumbnail-container {
+		min-height: 42vmin;
+	}
 }
 
 .collection-thumbnail {
