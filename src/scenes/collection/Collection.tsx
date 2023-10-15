@@ -197,21 +197,13 @@ class Collection extends React.PureComponent<any, any> {
         return (
             <section className="collection-with-images">
                 <div className="collection-navbar">
-                    <a href="/collections"><img className="icon" src={require("./assets/x.svg").default} alt="Close" /></a>
+                    <a href="/1"><img className="icon" src={require("./assets/x.svg").default} alt="Close" /></a>
                     <h2 className="title">{this.convertToRealContent(this.state.collection.title)}</h2>
                     <h2 className="collection-size">{this.state.collection.images && this.state.collection.images.length} images</h2>
                 </div>
                 <div className="images TARGETABLE">
                     {
                         this.state.collection.images && this.state.collection.images
-                            .map((value: any, index: any) => ({ value, sort: Math.random() }))
-                            .sort(
-                                this.state.moderatorMode
-                                    ? (a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime()
-                                    : (a: any, b: any) => a.sort - b.sort
-                                )
-                            //@ts-ignore
-                            .map(({ value }) => value)
                             .map((image: any, index: any) => {
                                 let src = this.backendURL + "uploads-compressed/" + image.pathname;
                                 let src_not_compressed = this.backendURL + "uploads/" + image.pathname;
