@@ -25,16 +25,15 @@
 	justify-content: center;
 }.collection-with-images > .images > .image {
 	margin-bottom: 0.5rem;
-	width: 100% !important;
-	height: 100% !important;
 
 	position: relative;
 	cursor: pointer;
+	display: block;
 }.collection-with-images > .images > .image > img {
 	width: 100%;
-	height: 100%;
 	position: relative;
 	z-index: 1;
+	image-orientation: from-image;
 
 	border-radius: 0.5rem;
 }.collection-with-images > .images > .image > .gradient {
